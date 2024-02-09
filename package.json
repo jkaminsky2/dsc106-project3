@@ -1,0 +1,14 @@
+{
+  "name": "@d3/u-s-map",
+  "main": "94e0204227322a69@113.js",
+  "version": "113.0.0",
+  "homepage": "https://observablehq.com/@d3/u-s-map",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
