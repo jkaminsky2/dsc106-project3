@@ -1,5 +1,5 @@
 function _1(md){return(
-md`# U.S. Map
+md`# U.S. Maps
 
 This map comes pre-projected in U.S. Albers (a [conic equal-area](/@d3/conic-equal-area) projection) from the [TopoJSON U.S. Atlas](https://github.com/topojson/us-atlas) for fast rendering. To [overlay data on the map](/@d3/u-s-state-capitals), use the projection \`d3.geoAlbersUsa().scale(1300).translate([487.5, 305])\`, which is configured for a 975x610 viewport. See also a variant of this projection that [includes Puerto Rico](/@d3/u-s-map-with-puerto-rico).`
 )}
