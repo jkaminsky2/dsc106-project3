@@ -28,7 +28,14 @@ yield new UnitedStatesChoropleth(mapProps)
 function _mapProps(){return(
 {
   countyFillFunction: (loc) => ('none'), // override to create county fill colors
-  stateFillFunction: (loc) => ('none'), // override to create state fill colors
+  stateFillFunction: (loc) => const data = await d3.csv("inter_visual_data.csv"); // Load your CSV file
+    const stateInfo = data.find(d => d.state_initials === loc.properties.name); // Find the corresponding state info
+    if (stateInfo) {
+      return stateInfo.value === "-1" ? "red" : "blue"; // Set color based on value
+    } else {
+      return "blue"; // Default color if state info is not found
+    }
+  }, // override to create state fill colors
   countyMouseOverFunction: (loc) => { }, // override to handle mouseovers
   countyMouseOutFunction: (loc) => { }, // override to handle mouseovers
   countyMouseMoveFunction: (loc) => { }, // override to handle mouseovers
